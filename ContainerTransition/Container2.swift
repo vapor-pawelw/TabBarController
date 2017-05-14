@@ -16,8 +16,4 @@ class Container2: ContainerViewController {
     static func instantiate() -> Container2 {
         return UIStoryboard(name: Container2.storyboardName, bundle: nil).instantiateViewController(withIdentifier: "Container2") as! Container2
     }
-    
-    override func viewDidLoad() {
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
 }

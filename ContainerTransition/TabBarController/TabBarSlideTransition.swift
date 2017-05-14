@@ -36,6 +36,7 @@ class TabBarSlideTransition: TabBarTransition {
         
         func snapshot(of view: UIView) -> UIView {
             UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0)
+            // use snapshotView(afterScreenUpdates:) instead of drawHierarchy when fixed on iPhone 7 simulator
             view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
@@ -69,8 +70,6 @@ class TabBarSlideTransition: TabBarTransition {
         // -
         
         UIView.animate(withDuration: 0.3,
-                       delay: 0.0,
-                       options: .curveEaseOut,
                        animations: {
                         snapshotView.transform = CGAffineTransform(translationX: -self.direction.value * containerView.bounds.size.width, y: 0)
                         containerView.transform = .identity

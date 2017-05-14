@@ -15,7 +15,7 @@ class TabBarManager<ContainerType: UIViewController> {
     var containerView: UIView!
     var tabBar: UITabBar
     
-    fileprivate var previousTabIndex: Int?
+    internal var previousTabIndex: Int?
     
     init(tabBar: UITabBar,
          viewControllers: [ContainerType],
@@ -23,5 +23,12 @@ class TabBarManager<ContainerType: UIViewController> {
         self.viewControllers = viewControllers
         self.containerView = containerView
         self.tabBar = tabBar
+        
+        guard let items = tabBar.items else {
+            fatalError("Tab bar items property is nil.")
+        }
+        guard viewControllers.count == tabBar.items?.count else {
+            fatalError("Tab bar items count (\(items.count)) is different from tab bar view controllers count (\(viewControllers.count)).")
+        }
     }
 }

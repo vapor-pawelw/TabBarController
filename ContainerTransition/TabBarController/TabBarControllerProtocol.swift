@@ -25,7 +25,7 @@ extension TabBarControllerProtocol where Self: UIViewController {
             return
         }
         guard let items = tabBarManager.tabBar.items, items.count > index else {
-            fatalError("Index item does not exist.")
+            fatalError("Index for given item does not exist.")
         }
         
         setActiveTab(items[index])
@@ -51,8 +51,17 @@ extension TabBarControllerProtocol where Self: UIViewController {
             activeItem = selectedItem
         }
         
-        guard let index = tabBarManager.tabBar.items?.index(of: activeItem) else {
-            fatalError("Something went terribly wrong")
+        guard let items = tabBarManager.tabBar.items else {
+            fatalError("Tab bar items property is nil.")
+        }
+        
+        guard let index = items.index(of: activeItem) else {
+            fatalError("Index for given item does not exist.")
+        }
+        
+        guard tabBarManager.previousTabIndex != index else {
+            // already selected
+            return
         }
         
         let viewController = tabBarManager.viewControllers[index]

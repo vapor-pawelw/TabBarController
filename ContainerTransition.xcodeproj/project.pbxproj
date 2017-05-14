@@ -19,6 +19,7 @@
 		47141A981EC7C21200DBD027 /* TabBarInstantTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47141A971EC7C21200DBD027 /* TabBarInstantTransition.swift */; };
 		47141A9A1EC7C22B00DBD027 /* TabBarSlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47141A991EC7C22B00DBD027 /* TabBarSlideTransition.swift */; };
 		47141A9C1EC7C29B00DBD027 /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47141A9B1EC7C29B00DBD027 /* TabBarManager.swift */; };
+		47141A9E1EC7C7CA00DBD027 /* Container3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47141A9D1EC7C7CA00DBD027 /* Container3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		47141A971EC7C21200DBD027 /* TabBarInstantTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarInstantTransition.swift; sourceTree = "<group>"; };
 		47141A991EC7C22B00DBD027 /* TabBarSlideTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarSlideTransition.swift; sourceTree = "<group>"; };
 		47141A9B1EC7C29B00DBD027 /* TabBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		47141A9D1EC7C7CA00DBD027 /* Container3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				47141A841EC7208F00DBD027 /* Info.plist */,
 				47141A8A1EC726F300DBD027 /* Container1.swift */,
 				47141A8E1EC72EDE00DBD027 /* Container2.swift */,
+				47141A9D1EC7C7CA00DBD027 /* Container3.swift */,
 				47141A8C1EC7281C00DBD027 /* ContainerViewController.swift */,
 			);
 			path = ContainerTransition;
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47141A8B1EC726F300DBD027 /* Container1.swift in Sources */,
+				47141A9E1EC7C7CA00DBD027 /* Container3.swift in Sources */,
 				47141A8F1EC72EDE00DBD027 /* Container2.swift in Sources */,
 				47141A7B1EC7208F00DBD027 /* ViewController.swift in Sources */,
 				47141A981EC7C21200DBD027 /* TabBarInstantTransition.swift in Sources */,
